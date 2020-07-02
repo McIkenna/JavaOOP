@@ -1,7 +1,9 @@
 package com.firstjava.oop.firstoop;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.firstjava.oop.firstoop.Service.StudentService;
+import com.firstjava.oop.firstoop.model.Student;
 
 /**
  * Hello world!
@@ -11,7 +13,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        /*System.out.println( "Hello World!" );
         Student s1 = new Student();
         s1.setName("Ikenna");
         s1.setDept("MEE");
@@ -38,6 +40,22 @@ public class App
         	System.out.println("Dept: " + s.getDept());
         	System.out.println("Level: " + s.getLevel());
         	
-        }
+        }*/
+    	
+    	//Assignment OOP
+    	
+    	Scanner studentName = new Scanner(System.in);
+    	System.out.println("Enter Student Name: ");
+    	String stuName = studentName.nextLine();
+    	
+    	Scanner studentDept = new Scanner(System.in); 
+    	System.out.println("Enter Student Department: ");
+    	String stuDept = studentDept.nextLine();
+    	
+    	
+    	StudentService studentService = new StudentService();
+    	Student newStudent = studentService.prepareStudent(stuName, stuDept);
+    	
+    	System.out.println(studentService.call(newStudent));
     }
 }

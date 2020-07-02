@@ -1,4 +1,4 @@
-package com.firstjava.oop.firstoop;
+package com.firstjava.oop.firstoop.model;
 
 public class Student {
 	
